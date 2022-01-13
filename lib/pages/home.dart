@@ -1,3 +1,4 @@
+import 'package:bottomnavtest/models/position.dart';
 import 'package:bottomnavtest/pages/page1.dart';
 import 'package:bottomnavtest/pages/page2.dart';
 import 'package:flutter/material.dart';
@@ -28,21 +29,5 @@ class HomePage extends StatelessWidget {
         );
       },
     );
-  }
-}
-
-class PositionModel extends ChangeNotifier {
-  int _currentPosition = 0;
-
-  int get index => _currentPosition;
-
-  void toPage1() {
-    _currentPosition = 0;
-    notifyListeners();
-  }
-
-  void toPage2() {
-    _currentPosition = 1;
-    notifyListeners();
   }
 }
